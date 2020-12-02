@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NetworkCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monitoring de la connectivité Internet: désactivé" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwZ-jZ-bGX">
+                                <rect key="frame" x="20" y="74" width="350" height="52.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYF-Oe-4Ai" customClass="CustomButton" customModule="NetworkCheck" customModuleProvider="target">
+                                <rect key="frame" x="64" y="725" width="262" height="55"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="dZD-1R-FXH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Démarrer le monitoring">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="boutonMonitoring:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WGB-io-JPg"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LNz-ST-uTW">
+                                <rect key="frame" x="30" y="565" width="330" height="110"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GPm-Qy-K8h">
+                                        <rect key="frame" x="0.0" y="0.0" width="220.66666666666666" height="60"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="not_ok" translatesAutoresizingMaskIntoConstraints="NO" id="Jq6-g3-ra5">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="Ewj-Kz-FcR"/>
+                                                    <constraint firstAttribute="width" constant="60" id="vLV-5p-wRy"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Non connecté" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="YJR-lT-gEx">
+                                                <rect key="frame" x="69.999999999999986" y="0.0" width="150.66666666666663" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type de connexion: Inconnue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gxl-6b-yLj">
+                                        <rect key="frame" x="0.0" y="80" width="312" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="Default"/>
+                        <constraints>
+                            <constraint firstItem="LNz-ST-uTW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="40W-rN-Y0f"/>
+                            <constraint firstItem="zwZ-jZ-bGX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="KXT-v1-zgb"/>
+                            <constraint firstItem="IYF-Oe-4Ai" firstAttribute="top" secondItem="LNz-ST-uTW" secondAttribute="bottom" constant="50" id="Kvh-fJ-2ds"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zwZ-jZ-bGX" secondAttribute="trailing" constant="20" id="dll-te-xtf"/>
+                            <constraint firstItem="IYF-Oe-4Ai" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="fj8-UE-3Nz"/>
+                            <constraint firstItem="zwZ-jZ-bGX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gWG-b9-TJY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IYF-Oe-4Ai" secondAttribute="bottom" constant="30" id="mZe-X0-W5z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LNz-ST-uTW" secondAttribute="trailing" constant="30" id="sH1-hP-IGS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IYF-Oe-4Ai" secondAttribute="trailing" constant="64" id="uSf-nD-suz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bouton" destination="IYF-Oe-4Ai" id="Tf4-07-SB3"/>
+                        <outlet property="fondStatutRéseau" destination="8bC-Xf-vdC" id="wmg-Sm-h2M"/>
+                        <outlet property="statutConnectivité" destination="YJR-lT-gEx" id="Nzj-dI-8jH"/>
+                        <outlet property="statutMonitoring" destination="zwZ-jZ-bGX" id="g0U-Yf-Nf6"/>
+                        <outlet property="typeConnexion" destination="gxl-6b-yLj" id="ScI-hd-dtB"/>
+                        <outlet property="voyantConnectivité" destination="Jq6-g3-ra5" id="HXO-vV-SeF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.875" y="103.52112676056338"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="IYF-Oe-4Ai">
+            <size key="intrinsicContentSize" width="218" height="39"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="not_ok" width="129" height="129"/>
+        <namedColor name="Default">
+            <color red="0.91600000858306885" green="0.91600000858306885" blue="0.91600000858306885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
